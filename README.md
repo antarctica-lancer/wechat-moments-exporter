@@ -26,7 +26,7 @@
 | **支持的形态** | 含 `Manifest.db` 的整机目录、含 `Documents/` 的 App 容器目录，或上述目录的 `.zip` / `.tar.gz` 压缩包 | 含 `info.xml` 与 `com.tencent.mm*.tar` 的备份目录 | 单个 `.db` 文件 |
 | **备份加密要求** | 仅支持**未加密**备份 | 支持加密备份，需输入备份密码解密 | 需为未加密数据库 |
 | **通讯录与身份识别** | 自动读取 `WCDB_Contact.sqlite`，显示 `wxid`、昵称、备注名，并区分“好友 / 非好友” | 安卓通讯录库（`EnMicroMsg.db`）已加密，**仅显示 `wxid`**，需通过“最近 20 条动态预览”确认人物 | iOS 库自动尝试关联同级通讯录；安卓库仅显示 `wxid` |
-| **不支持范围** | 加密的 iOS 备份 | HarmonyOS NEXT（纯血鸿蒙） | 加密的聊天记录库 |
+| **不支持范围** | 加密的 iOS 备份 | HarmonyOS NEXT | 加密的聊天记录库 |
 
 ---
 
@@ -36,8 +36,8 @@
 
 适用于 Windows 64 位系统，无需预先安装 Python。
 
-1. 前往 **Releases** 页面下载 `wechat-moments-exporter-v<xxx>.zip`。
-2. 将压缩包解压到路径较短的目录（例如 `D:\wechat-export`），避免触及 Windows 的 260 字符路径上限。
+1. 前往 **Releases** 页面下载发行包。
+2. 将压缩包解压到路径较短的目录，避免触及 Windows 的 260 字符路径上限。
 3. 双击目录中的 **双击运行.bat** 启动工具。
 
 > **提示**
