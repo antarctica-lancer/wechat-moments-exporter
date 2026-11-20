@@ -1,0 +1,55 @@
+name: Bug 反馈
+description: 报告程序报错、解析异常或下载失败问题
+title: "[Bug]: "
+labels: ["bug"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        感谢反馈！提交前请确认删除所有个人隐私信息（如真实 `wxid`、昵称、完整图片链接与备份密码）。
+
+  - type: dropdown
+    id: platform
+    attributes:
+      label: 备份来源类型
+      options:
+        - iPhone（iMazing / iTunes / Finder 整机或 App 容器）
+        - 华为（HiSuite 备份）
+        - 现成数据库文件（SnsMicroMsg.db / wc*_*.db）
+    validations:
+      required: true
+
+  - type: dropdown
+    id: run_mode
+    attributes:
+      label: 运行方式
+      options:
+        - Releases 免安装发行包
+        - 从源码运行（python src/main.py）
+        - 命令行单人导出（src/backup_one.py）
+    validations:
+      required: true
+
+  - type: input
+    id: env
+    attributes:
+      label: 运行环境
+      description: 操作系统、手机系统版本、微信版本（如适用）
+      placeholder: 例如：Windows 11 / iOS 18.2 / 微信 8.0.55
+    validations:
+      required: true
+
+  - type: textarea
+    id: description
+    attributes:
+      label: 问题描述与复现步骤
+      placeholder: 请描述你执行了哪一步、预期结果是什么、实际发生了什么。
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: 错误输出（请先脱敏）
+      render: text
+      placeholder: 粘贴终端报错信息（注意遮蔽用户名路径与 wxid）

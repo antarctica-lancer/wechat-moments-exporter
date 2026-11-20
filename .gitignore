@@ -1,0 +1,34 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.venv/
+venv/
+
+# 构建产物
+_build/
+dist/
+.build-cache/
+*.zip
+
+# 本地备份 / 导出结果（绝不提交）
+_dump/
+_work/
+*.db
+*.db-wal
+*.db-shm
+*.sqlite
+*.jpg
+*.png
+*.webp
+*.gif
+
+# 本地配置
+config.yaml
+.env
+
+# 编辑器 / 系统
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db

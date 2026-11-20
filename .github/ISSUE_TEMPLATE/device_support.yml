@@ -1,0 +1,55 @@
+name: 新机型 / 备份格式适配
+description: 提供其他手机品牌或备份工具的解密线索与格式信息（如一加 ColorOS、小米、vivo 等）
+title: "[Device]: "
+labels: ["enhancement", "device-support"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        本工具的核心解析与下载流程只需获取到未加密的 `SnsMicroMsg.db`（安卓）或 `wc*_*.db`（iOS）。
+        欢迎提供其他品牌备份格式的解密方法、目录结构或已知开源解密工具，帮助项目支持更多机型。
+        **请勿在 Issue 中上传真实备份文件、密码或包含个人隐私的数据。**
+
+  - type: input
+    id: device
+    attributes:
+      label: 手机品牌、型号与系统版本
+      placeholder: 例如：OnePlus 13 / ColorOS 15（Android 15）
+    validations:
+      required: true
+
+  - type: input
+    id: backup_tool
+    attributes:
+      label: 备份方式或工具名称
+      placeholder: 例如：系统自带本地备份 / 欢太手机搬家 / 小米手机助手
+    validations:
+      required: true
+
+  - type: dropdown
+    id: encrypted
+    attributes:
+      label: 备份文件是否加密
+      options:
+        - 是（需要密码解密）
+        - 否（明文归档）
+        - 不确定
+    validations:
+      required: true
+
+  - type: textarea
+    id: structure
+    attributes:
+      label: 备份目录结构与特征文件（脱敏）
+      description: 可贴出 `tree` 或文件名列表，帮助识别备份格式与微信数据所在位置。
+      render: text
+      placeholder: |
+        Backup/
+          ├── info.xml
+          └── com.tencent.mm.tar
+
+  - type: textarea
+    id: references
+    attributes:
+      label: 已知解密思路或参考项目（可选）
+      description: 如有现成的开源解密脚本、逆向文章或加密算法说明，请贴在此处。
